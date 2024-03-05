@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana v1</title>
+    <link rel="stylesheet" href="kalkulator.css" type="text/css"/>
+</head>
+<body>
+    <div>
+        <h2>Kalkulator Sederhana V1</h2><hr/>
+        <input type="number" placeholder="angka 1" id="ang1"/><br/>
+        <input type="number" placeholder="angka 2" id="ang2"/><br/>
+        <button id="tambah">+</button>
+        <button id="kurang">-</button>
+        <button id="kali">x</button>
+        <button id="bagi">/</button><br/>
+        <input type="number" readonly id="hasil"/>
+    </div>
+    <script>
+        var a1 = document.getElementById("ang1");
+        var a2 = document.getElementById("ang2");
+        var hasil = document.getElementById("hasil");
+
+        document.getElementById("tambah").addEventListener("click", function(){
+            hasil.value = parseInt(a1.value) + parseInt(a2.value);
+        });
+        document.getElementById("kurang").addEventListener("click", function(){
+            hasil.value = parseInt(a1.value) - parseInt(a2.value);
+        });
+        document.getElementById("kali").addEventListener("click", function(){
+            hasil.value = parseInt(a1.value) * parseInt(a2.value);
+        });
+        document.getElementById("bagi").addEventListener("click", function(){
+            hasil.value = parseInt(a1.value) / parseInt(a2.value);
+        });
+
+
+    </script>
+</body>
+</html>
